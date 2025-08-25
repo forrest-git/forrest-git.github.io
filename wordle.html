@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="static/css/stylesheet.css">
+	<title>Wordle Clone</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1>Wordle Clone</h1>
+			<p id="status" aria-live="polite">Make your first guess!</p>	
+		</div>
+	</header>
+
+	<main>
+		<div class="container" id="game">
+			<section id="guesses" role="grid" aria-label="Wordle game grid">
+				<div class="guess-line">
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+				</div>
+				<div class="guess-line">
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+				</div>
+				<div class="guess-line">
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+				</div>
+				<div class="guess-line">
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+				</div>
+				<div class="guess-line">
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+				</div>
+				<div class="guess-line">
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+					<div class="guess-letter"></div>
+				</div>
+			</section>
+			<section id="keyboard">
+				<div class="key-line">
+				    <div class="key" id="q">q</div>
+					<div class="key" id="w">w</div>
+					<div class="key" id="e">e</div>
+					<div class="key" id="r">r</div>
+					<div class="key" id="t">t</div>
+					<div class="key" id="y">y</div>
+					<div class="key" id="u">u</div>
+					<div class="key" id="i">i</div>
+					<div class="key" id="o">o</div>
+					<div class="key" id="p">p</div>
+				</div>
+
+				<div class="key-line">
+					<div class="key" id="a">a</div>
+					<div class="key" id="s">s</div>
+					<div class="key" id="d">d</div>
+					<div class="key" id="f">f</div>
+					<div class="key" id="g">g</div>
+					<div class="key" id="h">h</div>
+					<div class="key" id="j">j</div>
+					<div class="key" id="k">k</div>
+					<div class="key" id="l">l</div>
+				</div>
+
+				<div class="key-line">
+					<div class="key action" id="enter">enter</div>
+					<div class="key" id="z">z</div>
+					<div class="key" id="x">x</div>
+					<div class="key" id="c">c</div>
+					<div class="key" id="v">v</div>
+					<div class="key" id="b">b</div>
+					<div class="key" id="n">n</div>
+					<div class="key" id="m">m</div>
+					<div class="key action" id="backspace">
+						<!-- Backspace -->
+						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20" class="game-icon" data-testid="icon-backspace">
+							<path fill="var(--white)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+						</svg>
+					</div> 
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>© 2025 Papp Bence Attila</p>
+		</div>
+	</footer>
+	<script src="static/js/wordle.js"></script>
+</body>
+</html>
