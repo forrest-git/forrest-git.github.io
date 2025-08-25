@@ -123,6 +123,7 @@ body {
 	font-family: arial;
 	background-color: var(--black);
 	color: var(--white);
+	height: 100vh;
 }
 
 
@@ -142,10 +143,6 @@ main {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-}
-
-main > .container {
-	
 }
 
 footer {
