@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sudoku</title>
+</head>
+<style>
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+		height: 100vh;
+		margin: 0;
+		gap: 15px;
+		font-family: sans-serif;
+	}
+	#game {
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(9, 1fr);
+		gap: 0;
+		width: calc(40px * 9);
+		height: calc(40px * 9);
+		border-top: 3px solid black;
+		border-left: 3px solid black;
+	}
+	.company {
+		display: flex;
+		justify-content: flex-start;
+		width: calc(40px * 9);
+		gap: 5px;
+	}
+	.company button {
+		width: 40px;
+		height: 40px;
+		font-size: 18px;
+		cursor: pointer;
+		border: 1px solid #333;
+		border-radius: 5px;
+		background-color: #f0f0f0;
+		color: #000;
+		transition: background-color 0.2s, transform 0.1s;
+	}
+
+	.company button {
+		background-color: #ddd;
+	}
+
+	.company button {
+		transform: scale(0.95);
+	}
+	.field {
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		font-size: 18px;
+		border: 1px solid #999;
+		box-sizing: border-box;
+		caret-color: transparent;
+		cursor: pointer;
+	}
+	.field.set {
+		background-color: #eee;
+	}
+	.field:focus {
+		outline: none;
+		background-color: rgba(0, 255, 0, .2);
+	}
+	input[type=number]::-webkit-outer-spin-button,
+	input[type=number]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	input[type=number] {
+		-moz-appearance: textfield;
+	}
+	input[type=number]:focus {
+
+	}
+	#message-box-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(255, 255, 255, .9);
+		display: none;
+		align-items: center;
+		justify-content: center;
+	}
+	.message-box {
+		width: 400px;
+		height: 200px;
+		background-color: #fff;
+		border: 1px solid black;
+		border-radius: 10px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#message-box-close {
+		font-size: 30px;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+		cursor: pointer;
+	}
+</style>
+<body>
+
+<div id="game">
+	
+</div>
+
+<script src="script/main.js"></script>
+<div class="company">
+	<button onclick="checkSolution()">&#10003;</button>
+	<button onclick="resetBoard()">&#10227;</button>
+</div>
+<div id="message-box-container">
+	<div class="message-box">
+		<h2 id="message-box-uzenet"></h2>
+		<span id="message-box-close" onclick="document.getElementById('message-box-container').style.display ='none'">×</span>
+	</div>
+</div>
+	
+</body>
+</html>
